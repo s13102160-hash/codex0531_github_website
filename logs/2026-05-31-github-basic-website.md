@@ -178,6 +178,36 @@ error: could not lock config file .git/config: File exists
 狀態：
 已完成。
 
+### 9. 設定 GitHub remote 並嘗試推送
+
+Codex 指引：
+GitHub repository 建立完成後，需要把遠端 URL 設為 `origin`，再推送 `main` 分支。
+
+使用者操作：
+提供 GitHub repository URL：
+
+```text
+https://github.com/s13102160-hash/codex0531_github_website.git
+```
+
+觀察結果：
+
+- 已設定 `origin` remote。
+- 第一次推送時，執行環境無法連線到 GitHub。
+- 改用授權連線後，Git 顯示 `dubious ownership` 安全阻擋。
+
+問題：
+目前 repository 的擁有者與推送使用者不同，Git 要求把資料夾加入 safe directory。
+
+原因：
+repository 是在 Codex 沙盒中初始化，但推送時使用 Windows 使用者 `Hong`。
+
+解法：
+將目前專案資料夾加入 Git 全域 safe.directory 清單後，再重新推送。
+
+狀態：
+等待安全目錄設定後重試推送。
+
 ### 8. 建立第一個 commit
 
 Codex 指引：
@@ -249,7 +279,7 @@ GitHub Pages 適合發布靜態網站。官方文件說明，它可以從 GitHub
 - 設定 Git 提交身分：已完成
 - 建立第一個 commit：已完成
 - 在 GitHub 建立遠端 repository
-- 設定 remote
+- 設定 remote：已完成
 - 推送到 GitHub
 - 到 `Settings` -> `Pages` 開啟 GitHub Pages
 - 記錄 GitHub Pages 網址與操作截圖

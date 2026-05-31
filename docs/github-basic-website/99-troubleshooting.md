@@ -101,3 +101,27 @@ Windows 版 Git 常會依照換行設定處理文字檔。這是換行格式提�
 
 狀態：
 已了解，未阻止 commit。
+
+## 2026-05-31：推送時遇到 Git dubious ownership
+
+問題：
+推送到 GitHub 時，Git 偵測到 repository 擁有者與目前執行推送的 Windows 使用者不同，因此阻擋操作。
+
+觀察到的訊息：
+
+```text
+fatal: detected dubious ownership in repository at 'D:/你哥/codex0531_github_website'
+```
+
+原因：
+這個 repository 是在 Codex 沙盒使用者下初始化的，但推送時使用的是 Windows 使用者 `Hong`。Git 會用這個保護機制避免操作不信任的資料夾。
+
+解法：
+把目前專案資料夾加入 Git 的全域 safe.directory 清單：
+
+```text
+git config --global --add safe.directory 'D:/你哥/codex0531_github_website'
+```
+
+狀態：
+等待授權後執行。
