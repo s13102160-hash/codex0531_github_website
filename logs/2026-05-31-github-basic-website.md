@@ -208,6 +208,35 @@ repository 是在 Codex 沙盒中初始化，但推送時使用 Windows 使用�
 狀態：
 已完成。加入 safe.directory 後，重新推送成功，`main` 已上傳到 GitHub。
 
+### 10. 驗證 GitHub Pages 網址
+
+Codex 指引：
+Pages 設定後，要用實際網址檢查是否能開啟，並確認網址是否對應到目前 repository。
+
+使用者操作：
+提供 GitHub Pages 網址：
+
+```text
+https://s13102160-hash.github.io/elmo/
+```
+
+觀察結果：
+
+- `https://s13102160-hash.github.io/elmo/` 可以開啟，回應狀態為 200。
+- `https://s13102160-hash.github.io/codex0531_github_website/` 目前仍是 GitHub Pages 404。
+
+問題：
+可開啟的 Pages 網址 `/elmo/` 與目前 repository 名稱 `codex0531_github_website` 不一致。
+
+原因：
+GitHub Pages 的專案網站網址通常會使用 repository 名稱作為路徑。`/elmo/` 很可能是另一個 repository 的 Pages。
+
+解法：
+回到目前 repository `s13102160-hash/codex0531_github_website` 的 `Settings` -> `Pages`，確認發布來源是 `main` 和 `/(root)`。如果使用者想讓網址變成 `/elmo/`，則需要改用名為 `elmo` 的 repository 或調整專案名稱與遠端設定。
+
+狀態：
+等待確認 Pages 設定位置。
+
 ### 8. 建立第一個 commit
 
 Codex 指引：

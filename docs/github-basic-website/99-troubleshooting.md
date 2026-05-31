@@ -125,3 +125,32 @@ git config --global --add safe.directory 'D:/你哥/codex0531_github_website'
 
 狀態：
 已完成。加入 safe.directory 後，重新推送成功。
+
+## 2026-05-31：Pages 網址與目前 repository 不一致
+
+問題：
+使用者提供的 GitHub Pages 網址是：
+
+```text
+https://s13102160-hash.github.io/elmo/
+```
+
+但目前本機專案推送到的 repository 是：
+
+```text
+https://github.com/s13102160-hash/codex0531_github_website.git
+```
+
+觀察結果：
+
+- `https://s13102160-hash.github.io/elmo/` 回應 200，網站可開啟。
+- `https://s13102160-hash.github.io/codex0531_github_website/` 回應 GitHub Pages 404。
+
+原因：
+GitHub Pages 的網址通常會依 repository 名稱產生。`/elmo/` 對應的很可能是名為 `elmo` 的 repository，不是目前這個 `codex0531_github_website` repository。
+
+解法：
+回到目前 repository 的 `Settings` -> `Pages`，確認 Pages 是在 `s13102160-hash/codex0531_github_website` 這個 repository 裡啟用，且發布來源是 `main` 和 `/(root)`。
+
+狀態：
+等待使用者確認 GitHub Pages 設定所在的 repository。
