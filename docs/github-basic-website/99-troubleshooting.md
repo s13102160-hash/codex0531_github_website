@@ -81,3 +81,23 @@ gh : 無法辨識 'gh' 詞彙是否為 Cmdlet、函數、指令檔或可執行�
 
 狀態：
 改採 GitHub 網頁建立 repository 的流程。
+
+## 2026-05-31：Windows 換行提示
+
+問題：
+把檔案加入 Git 暫存區時，Git 顯示 LF 之後可能會被轉成 CRLF。
+
+觀察到的訊息：
+
+```text
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+```
+
+原因：
+Windows 版 Git 常會依照換行設定處理文字檔。這是換行格式提示，不是提交失敗。
+
+解法：
+本次先接受預設行為，繼續完成 commit。若之後專案需要固定換行規則，可以新增 `.gitattributes`。
+
+狀態：
+已了解，未阻止 commit。

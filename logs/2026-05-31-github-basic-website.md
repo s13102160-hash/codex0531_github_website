@@ -178,6 +178,32 @@ error: could not lock config file .git/config: File exists
 狀態：
 已完成。
 
+### 8. 建立第一個 commit
+
+Codex 指引：
+完成網站與學習紀錄後，先建立第一個本機版本。這樣後續推送到 GitHub 時，就有一個清楚的初始狀態。
+
+使用者操作：
+由 Codex 將網站檔案與學習紀錄加入 Git 暫存區，並建立 commit。
+
+觀察結果：
+
+- commit 訊息：`Initial GitHub Pages website`
+- commit 編號開頭：`7690c90`
+- Git 記錄 8 個檔案被建立。
+
+問題：
+加入暫存區時，Git 顯示 Windows 換行提示。
+
+原因：
+Windows 版 Git 可能會把 LF 換行轉成 CRLF。這是提示，不是錯誤。
+
+解法：
+本次接受預設行為，繼續完成 commit。若之後需要固定換行規則，再建立 `.gitattributes`。
+
+狀態：
+已完成。
+
 ### 3. 建立學習紀錄
 
 Codex 指引：
@@ -221,6 +247,7 @@ GitHub Pages 適合發布靜態網站。官方文件說明，它可以從 GitHub
 - 初始化 Git repository：已完成
 - 檢查檔案是否都被 Git 偵測到：已完成
 - 設定 Git 提交身分：已完成
+- 建立第一個 commit：已完成
 - 在 GitHub 建立遠端 repository
 - 設定 remote
 - 推送到 GitHub
