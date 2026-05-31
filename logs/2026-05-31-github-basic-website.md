@@ -237,6 +237,36 @@ GitHub Pages 的專案網站網址通常會使用 repository 名稱作為路徑�
 狀態：
 等待確認 Pages 設定位置。
 
+### 11. 確認 GitHub Pages 成功上線
+
+Codex 指引：
+拿到正確的 GitHub Pages 網址後，要確認回應狀態是成功，並檢查頁面內容是否是目前專案的首頁。
+
+使用者操作：
+提供正確網址：
+
+```text
+https://s13102160-hash.github.io/codex0531_github_website/
+```
+
+觀察結果：
+
+- 網址回應狀態為 200。
+- 頁面內容包含標題 `我的第一個 GitHub Pages 網站`。
+- 頁面內容包含連到 GitHub Pages 文件與學習紀錄的按鈕。
+
+問題：
+無。
+
+原因：
+不適用。
+
+解法：
+不適用。
+
+狀態：
+GitHub Pages 已成功上線。
+
 ### 8. 建立第一個 commit
 
 Codex 指引：
@@ -311,4 +341,6 @@ GitHub Pages 適合發布靜態網站。官方文件說明，它可以從 GitHub
 - 設定 remote：已完成
 - 推送到 GitHub：已完成
 - 到 `Settings` -> `Pages` 開啟 GitHub Pages
-- 記錄 GitHub Pages 網址與操作截圖
+- 到 `Settings` -> `Pages` 開啟 GitHub Pages：已完成
+- 記錄 GitHub Pages 網址：已完成
+- 操作截圖：尚未提供截圖檔案
