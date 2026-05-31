@@ -1,0 +1,138 @@
+:root {
+  color-scheme: light;
+  --background: #f6f7f9;
+  --surface: #ffffff;
+  --text: #1f2933;
+  --muted: #5d6b7a;
+  --border: #d8dee6;
+  --accent: #116149;
+  --accent-dark: #0b4635;
+  --accent-soft: #e4f2ed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, "Noto Sans TC", sans-serif;
+  color: var(--text);
+  background:
+    linear-gradient(180deg, rgba(17, 97, 73, 0.08), transparent 42%),
+    var(--background);
+}
+
+a {
+  color: inherit;
+}
+
+.page {
+  width: min(960px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+.intro,
+.steps {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 18px 45px rgba(31, 41, 51, 0.08);
+}
+
+.intro {
+  padding: clamp(32px, 6vw, 72px);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: clamp(2.25rem, 6vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.lead {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button.primary {
+  color: #ffffff;
+  background: var(--accent);
+}
+
+.button.primary:hover {
+  background: var(--accent-dark);
+}
+
+.button.secondary {
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+}
+
+.steps {
+  margin-top: 24px;
+  padding: 28px;
+}
+
+.steps h2 {
+  margin-bottom: 16px;
+  font-size: 1.35rem;
+}
+
+.steps ol {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+@media (max-width: 560px) {
+  .page {
+    width: min(100% - 24px, 960px);
+    padding: 24px 0;
+  }
+
+  .intro,
+  .steps {
+    box-shadow: none;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
