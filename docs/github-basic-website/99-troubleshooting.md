@@ -124,4 +124,4 @@ git config --global --add safe.directory 'D:/你哥/codex0531_github_website'
 ```
 
 狀態：
-等待授權後執行。
+已完成。加入 safe.directory 後，重新推送成功。

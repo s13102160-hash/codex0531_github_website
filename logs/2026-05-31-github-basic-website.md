@@ -206,7 +206,7 @@ repository 是在 Codex 沙盒中初始化，但推送時使用 Windows 使用�
 將目前專案資料夾加入 Git 全域 safe.directory 清單後，再重新推送。
 
 狀態：
-等待安全目錄設定後重試推送。
+已完成。加入 safe.directory 後，重新推送成功，`main` 已上傳到 GitHub。
 
 ### 8. 建立第一個 commit
 
@@ -280,6 +280,6 @@ GitHub Pages 適合發布靜態網站。官方文件說明，它可以從 GitHub
 - 建立第一個 commit：已完成
 - 在 GitHub 建立遠端 repository
 - 設定 remote：已完成
-- 推送到 GitHub
+- 推送到 GitHub：已完成
 - 到 `Settings` -> `Pages` 開啟 GitHub Pages
 - 記錄 GitHub Pages 網址與操作截圖
